@@ -1,0 +1,6 @@
+
+FROM python:3.12-slim
+WORKDIR /app
+COPY polybot /app/polybot
+ENV PYTHONPATH=/app
+RUN pip install --no-cache-dir httpx>=0.28.0 aiosqlite>=0.20.0 curl-cffi>=0.7.0 playwright>=1.50.0 browserforge>=1.2.0 scrapling>=0.4.8 lxml>=5.0.0 cssselect>=1.2.0 numpy>=1.26.0 python-dotenv>=1.2.0 py-clob-client>=0.1.0
